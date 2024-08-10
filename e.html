@@ -1,0 +1,131 @@
+<script>
+let e = {};
+function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
+  }
+e.area=[
+135767,1723337,295234,137732,423967,269601,14357,6446,170312,153910,28313,216443,149995,94326,145746,213100,104656,135659,91633,32131,27336,250487,225163,125438,180540,380831,200330,286380,24214,22591,314917,141297,139391,183108,116098,181037,254799,119280,4001,82933,199729,109153,695662,219882,24906,110787,184661,62756,169635,253335
+]
+e.state=[
+'Alabama','Alaska','Arizona','Arkansas','California','Colorado','Connecticut','Delaware','Florida','Georgia','Hawaii','Idaho','Illinois','Indiana','Iowa','Kansas','Kentucky','Louisiana','Maine','Maryland','Massachusetts','Michigan','Minnesota','Mississippi','Missouri','Montana','Nebraska','Nevada','New Hampshire','New Jersey','New Mexico','New York','North Carolina','North Dakota','Ohio','Oklahoma','Oregon','Pennsylvania','Rhode Island','South Carolina','South Dakota','Tennessee','Texas','Utah','Vermont','Virginia','Washington','West Virginia','Wisconsin','Wyoming',
+]
+function genarate(){
+   document.getElementById("whooot").hidden=true;  
+   e.b=getRandomInt(50)
+   e.a=getRandomInt(50)
+
+
+
+e.state1=e.state[(e.a)]
+e.state2=e.state[(e.b)]
+e.area1=e.area[(e.a)]
+e.area2=e.area[(e.b)]
+
+document.getElementById("state1").innerText=(e.state1);  
+document.getElementById("state2").innerText=(e.state2);  
+document.getElementById("whoooot").hidden=false; 
+
+
+
+}
+
+
+function check(){
+   e.c=e.woot
+   if (e.area1 > e.area2){
+      if (e.c == "b"){
+         e.yo = 'correct'
+         
+      }
+      else{
+         e.yo = 'wrong'
+      }
+
+   }
+   else{
+      if (e.c == "b"){
+         e.yo = 'wrong'
+         
+      }
+      else{
+         e.yo = 'correct'
+      }
+
+   }
+   document.getElementById("rizz").innerText=(e.yo); 
+   document.getElementById("rizzy").innerText=(e.area1); 
+   document.getElementById("rizzyy").innerText=(e.area2);
+   document.getElementById("state3").innerText=(e.state1);  
+   document.getElementById("state4").innerText=(e.state2);  
+   document.getElementById("whooot").hidden=false;  
+
+
+}
+
+   function red(){
+      e.woot = "b"
+      check()
+
+   }
+
+   function blue(){
+      e.woot = "a"
+      check()
+
+   }
+
+</script>
+<button onclick="genarate()">new problem</button>
+<br>
+<br>
+<br>
+<div id="whoooot" hidden=true>
+   <button style="background-color: red;" onclick="red()">
+      X
+   </button>
+<span id="state1"></span>
+ VS. 
+<span id="state2"></span>
+   <button style="background-color: blue;" onclick="blue()">
+      X
+   </button>
+           &nbsp;&nbsp;&nbsp; Which is larger?
+</div>
+<br>
+<br>
+<div id="whooot" hidden=true>
+<span id="rizz"></span>
+<br>
+<br>
+<span id="state3"></span>
+<br>
+<span id="rizzy"></span> km2
+<br>
+<br>
+<span id="state4"></span>
+<br>
+<span id="rizzyy"></span> km2
+</div>
+
+<style>
+body{
+   background-color: black;
+   color: white;
+   
+}
+
+text{
+   color: #ffffff;
+}
+
+span{
+   color: white
+}
+
+div{
+   background-color: #34194e;
+   color: white;
+   border-color: white;
+   border-width: 15px;
+}
+</style>
